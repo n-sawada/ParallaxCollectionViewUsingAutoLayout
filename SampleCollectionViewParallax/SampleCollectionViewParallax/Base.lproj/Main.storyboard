@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="rp7-lC-2Zr">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+    </dependencies>
+    <scenes>
+        <!--Parallax Collection View Controller-->
+        <scene sceneID="JNn-eP-oaT">
+            <objects>
+                <collectionViewController automaticallyAdjustsScrollViewInsets="NO" id="rp7-lC-2Zr" customClass="ParallaxCollectionViewController" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="COl-WY-vH8">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="402-VS-kUW">
+                            <size key="itemSize" width="599" height="192"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ParallaxCollectionViewCell" id="70f-Eb-4kB" customClass="ParallaxCollectionViewCell">
+                                <rect key="frame" x="1" y="0.0" width="599" height="192"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="599" height="192"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ljq-vY-h3w">
+                                            <rect key="frame" x="0.0" y="-96" width="599" height="384"/>
+                                            <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="173" id="Agw-km-jUj"/>
+                                                <constraint firstAttribute="height" constant="262" id="O5k-S3-bpZ"/>
+                                            </constraints>
+                                            <variation key="default">
+                                                <mask key="constraints">
+                                                    <exclude reference="Agw-km-jUj"/>
+                                                    <exclude reference="O5k-S3-bpZ"/>
+                                                </mask>
+                                            </variation>
+                                        </imageView>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                                <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="Ljq-vY-h3w" firstAttribute="centerY" secondItem="70f-Eb-4kB" secondAttribute="centerY" id="3RN-B0-9MT"/>
+                                    <constraint firstItem="Ljq-vY-h3w" firstAttribute="leading" secondItem="70f-Eb-4kB" secondAttribute="leading" id="M3Q-LR-cmM"/>
+                                    <constraint firstItem="Ljq-vY-h3w" firstAttribute="leading" secondItem="70f-Eb-4kB" secondAttribute="leading" id="VkO-Uo-lLP"/>
+                                    <constraint firstAttribute="trailing" secondItem="Ljq-vY-h3w" secondAttribute="trailing" id="diz-hw-Q3c"/>
+                                    <constraint firstAttribute="trailing" secondItem="Ljq-vY-h3w" secondAttribute="trailing" id="hA7-8t-MCh"/>
+                                    <constraint firstItem="Ljq-vY-h3w" firstAttribute="height" secondItem="70f-Eb-4kB" secondAttribute="height" multiplier="2" id="t0R-GF-hiU"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="VkO-Uo-lLP"/>
+                                        <exclude reference="hA7-8t-MCh"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <outlet property="paraImageView" destination="Ljq-vY-h3w" id="GPn-hD-nNj"/>
+                                    <outlet property="verticalCenter" destination="3RN-B0-9MT" id="fpA-gB-zKS"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="rp7-lC-2Zr" id="t99-Dj-mwF"/>
+                            <outlet property="delegate" destination="rp7-lC-2Zr" id="yAG-0z-Y0H"/>
+                        </connections>
+                    </collectionView>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0X4-yh-xDE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="486" y="388"/>
+        </scene>
+    </scenes>
+</document>
