@@ -7,7 +7,6 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "UIView+Nib.h"
 #import "UIView+Frame.h"
 
 #pragma mark - Const
